@@ -6,6 +6,12 @@ const auditInput = document.getElementById("auditInput");
 
 const addAuditBtn = document.getElementById("addAuditBtn");
 
+const prioritySelect =
+    document.getElementById("prioritySelect");
+
+const dueDateInput =
+    document.getElementById("dueDateInput");
+
 const auditList = document.getElementById("auditList");
 
 const totalAudits = document.getElementById("totalAudits");
@@ -53,16 +59,20 @@ function addAudit(){
         return;
     }
 
-    const audit = {
+const audit = {
 
-        id:Date.now(),
+    id:Date.now(),
 
-        task:task,
+    task:task,
 
-        status:"pending",
+    status:"pending",
 
-        createdAt:new Date().toLocaleString()
-    };
+    priority: prioritySelect.value,
+
+    dueDate: dueDateInput.value,
+
+    createdAt:new Date().toLocaleString()
+};
 
     audits.push(audit);
 
@@ -101,18 +111,39 @@ filteredAudits.forEach((audit)=>{
 
         card.innerHTML = `
 
-            <div class="audit-info">
+        <div class="audit-info">
 
-                <h3>${audit.task}</h3>
+            <h3>${audit.task}</h3>
 
-                <p>
-                    Status: 
-                    ${audit.status.toUpperCase()}
-                </p>
+            <div class="audit-meta">
 
-                <p>
-                    ${audit.createdAt}
-                </p>
+            <span class="
+            priority-badge
+            ${(audit.priority || "Low").toLowerCase()}
+            ">
+            ${audit.priority || "Low"}
+             </span>
+
+             <span class="due-date">
+
+            ${
+                audit.dueDate
+                ? audit.dueDate
+                : "No Due Date"
+            }
+
+            </span>
+
+            </div>
+
+            <p>
+            Status:
+             ${audit.status.toUpperCase()}
+            </p>
+
+             <p>
+            ${audit.createdAt}
+             </p>
 
             </div>
 
