@@ -5,6 +5,7 @@ const locationEl = document.getElementById('location');
 const summaryEl = document.getElementById('summary');
 const detailsEl = document.getElementById('details');
 const errorEl = document.getElementById('error');
+const clearBtn = document.getElementById('clearBtn');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -20,6 +21,13 @@ form.addEventListener('submit', async (e) => {
   } catch (err) {
     showError(err.message || 'Failed to fetch weather');
   }
+});
+
+clearBtn?.addEventListener('click', () => {
+  cityInput.value = '';
+  result.classList.add('hidden');
+  errorEl.classList.add('hidden');
+  cityInput.focus();
 });
 
 function showLoading(){
