@@ -136,6 +136,7 @@ Open a Pull Request with:
 | **`debug.js`** | JavaScript | Contains the game logic, challenge snippets, timer, and scoring system for the Debug Game. |
 | **`program.html`** | HTML | **[Protected]** Random Coding Challenge interface where users solve programming problems. |
 | **`program.js`** | JavaScript | Manages the challenge pool, live code execution/testing, and scoring for the Coding Game. |
+| **`output.html`** | HTML | **[Protected]** Guess Output Game featuring glassmorphism UI and code prediction logic. |
 
 ---
 
