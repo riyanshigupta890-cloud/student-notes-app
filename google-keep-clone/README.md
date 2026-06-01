@@ -132,6 +132,12 @@ Open a Pull Request with:
 | **`self-test.js`** | JavaScript | Manages test state, clocks, MCQ rendering, auto-submit triggers, score computation, and dashboard history mapping. |
 | **`mindmap.html`** | HTML | **[Protected]** Whiteboard editor featuring an infinite canvas dot grid, custom nodes toolbars, node coordinate grids, and JSON exporter. |
 | **`mindmap.js`** | JavaScript | Implements whiteboard nodes creation, mouse coordinates tracking, node draggable states constraints, connection coordinates, and canvas clearing. |
+| **`debug.html`** | HTML | **[Protected]** Debug Game interface where users fix code bugs to earn points. |
+| **`debug.js`** | JavaScript | Contains the game logic, challenge snippets, timer, and scoring system for the Debug Game. |
+| **`program.html`** | HTML | **[Protected]** Random Coding Challenge interface where users solve programming problems. |
+| **`program.js`** | JavaScript | Manages the challenge pool, live code execution/testing, and scoring for the Coding Game. |
+| **`output.html`** | HTML | **[Protected]** Guess Output Game featuring glassmorphism UI and code prediction logic. |
+| **`Quiz.html`** | HTML | **[Protected]** Coding Quiz Game with multiple categories and performance review. |
 
 ---
 
